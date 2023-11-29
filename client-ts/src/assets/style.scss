@@ -1,0 +1,245 @@
+body {
+
+    padding: 0;
+    margin: 0;
+
+
+    .App {
+
+
+        .layout {
+            background: linear-gradient(to bottom, #001427 0%, #001427 50%, #708d81 50%, #708d81 100%);
+
+            display: flex;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            justify-content: center;
+            align-items: center;
+
+            overflow-y: auto;
+
+            .chat,
+            .enterance {
+                background: #8d0801;
+                color: #f4d58d;
+                border: 2px solid #f4d58d;
+
+                border-radius: 10px;
+
+                &__header {
+                    padding: 10px 20px;
+
+                    h3 {
+                        margin: 0;
+                    }
+
+                }
+
+                &__body {
+                    background: #f4d58d;
+                    color: #8d0801;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    padding: 10px 20px;
+                    border: 2px solid #8d0801;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    button,
+                    input {
+                        margin-bottom: 10px;
+                        width: 250px;
+                        padding: 5px 10px;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        border: 1px solid #8d0801;
+
+                    }
+
+                    button {
+                        background: #8d0801;
+                        color: #f4d58d;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+
+                }
+
+            }
+
+            .chat {
+
+                width: 400px;
+
+                &__body {
+                    height: 400px;
+
+                    border-radius: 0;
+
+                    .messages {
+                        max-height: 400px;
+                        overflow-y: auto;
+
+
+                        .message {
+                            color: #001427;
+                            text-align: left;
+                            margin-bottom: 5px;
+
+                            &__block {
+                                display: inline-block;
+                                position: relative;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                background: #708d81;
+                                margin-right: 20px;
+                                margin-left: 10px;
+
+                                .triangle {
+                                    position: absolute;
+                                    left: -10px;
+                                    top: 5px;
+                                    width: 0px;
+                                    height: 0px;
+                                    border-style: solid;
+                                    border-width: 0 10px 10px 0;
+                                    border-color: transparent #708D81 transparent transparent;
+                                    transform: rotate(0deg);
+
+                                }
+
+
+                                &__header {
+
+                                    font-weight: bold;
+                                    font-size: 0.9em;
+                                    text-align: left;
+
+                                }
+
+                                &__header{
+                                    border-bottom: 1px solid #001427;
+                                    }
+                                &__footer {
+                                    border-top: 1px solid #001427;
+                                    font-size: 0.8em;
+                                    text-align: right;
+                                }
+
+                                &__body {
+                                    font-size: 1.2em;
+                                    padding: 5px 25px 5px 0;
+
+                                }
+
+
+                            }
+
+                            &.owner {
+                                text-align: right;
+                            color: #f4d58d;
+                            text-shadow: unset;
+
+                                .message__block {
+                                    background: #001427;
+                                    margin-right: 10px;
+                                    margin-left: 20px;
+                                    position: relative;
+
+
+                                    .triangle {
+                                        position: absolute;
+                                        left: unset;
+                                        top: unset;
+                                        right: -10px;
+                                        bottom: 5px;
+                                        width: 0px;
+                                        height: 0px;
+                                        border-style: solid;
+                                        border-width: 10px 0 0 10px;
+                                        border-color: transparent transparent transparent #001427;
+                                        transform: rotate(0deg);
+
+                                    }
+
+
+                                    &__body {
+                                        font-size: 1.2em;
+                                        padding: 5px 0 5px 25px;
+
+                                    }
+                                        
+                                        
+                                &__header{
+                                    border-bottom: 1px solid #f4d58d;
+                                    }
+                                &__footer {
+                                    border-top: 1px solid #f4d58d;
+                                }
+                                }
+
+                            }
+
+
+
+                        }
+
+
+                    }
+                }
+
+                &__footer {
+
+                    padding: 10px 20px;
+
+                    &__message {
+                        display: flex;
+                        align-items: stretch;
+                        margin-bottom: 5px;
+
+                        textarea {
+                            border: 1px solid #f4d58d;
+                            width: 90%;
+                            height: 50px;
+                            resize: none;
+                        }
+
+                        button {
+                            width: 10%;
+
+                        }
+                    }
+
+                    &__logout {
+                        button {
+                            width: 100%;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            font-size: 15px;
+                        }
+
+                    }
+
+                    button {
+                        color: #8d0801;
+                        border: 1px solid #f4d58d;
+                        background: #f4d58d;
+                        cursor: pointer;
+                    }
+
+
+                }
+
+
+            }
+        }
+
+
+
+    }
+
+}
