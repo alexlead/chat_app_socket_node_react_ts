@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface Enterance {
+interface EntranceObject {
     username: string,
     setUsername: (username:string)=> void,
     room: string,
@@ -10,7 +10,7 @@ interface Enterance {
 }
 
 
-const Enterence = ({username, setUsername, room, setRoom, joinRoom }: Enterance) => {
+const Entrance = ({username, setUsername, room, setRoom, joinRoom }: EntranceObject) => {
 
   return (
     <div className="layout">
@@ -27,4 +27,4 @@ const Enterence = ({username, setUsername, room, setRoom, joinRoom }: Enterance)
   )
 }
 
-export default Enterence
+export default Entrance

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { io, Socket } from "socket.io-client";
-import Enterence from './components/Enterence';
+import Entrance from './components/Entrance';
 import Chat from './components/Chat';
 
 
@@ -25,7 +25,7 @@ function App() {
        ( 
        <Chat socket={socket} username={username} room={room} setEntered={setEntered}/>
        ) : ( 
-        <Enterence username={username} setUsername={setUsername} room={room} setRoom={ setRoom } joinRoom={joinRoom} />
+        <Entrance username={username} setUsername={setUsername} room={room} setRoom={ setRoom } joinRoom={joinRoom} />
         )
       }
     </div>

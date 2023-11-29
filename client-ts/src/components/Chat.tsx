@@ -56,7 +56,7 @@ const Chat = ({socket, username, room, setEntered }:ChatInterface) => {
      setMessagesList([...messagesList, data]);
      console.log(messagesList);
     })
- }, [connection])
+ }, [])
 
   
   
